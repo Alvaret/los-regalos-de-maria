@@ -50,7 +50,6 @@ import Layout from '../layouts/Layout.astro';
 		width: 100%;
 		text-align: center;
 		padding: 2rem;
-		box-sizing: border-box;
 	}
 
 	.title {
@@ -81,7 +80,6 @@ import Layout from '../layouts/Layout.astro';
 		border-radius: 16px;
 		padding: 2rem;
 		transition: all 0.3s ease;
-		box-sizing: border-box;
 	}
 
 	.box:hover {
@@ -199,9 +197,8 @@ import Layout from '../layouts/Layout.astro';
 
 	@media (max-width: 768px) {
 		.container {
-			padding: 1rem;
+			padding: 0;
 			max-width: 100%;
-			box-sizing: border-box;
 		}
 
 		.title {
@@ -219,15 +216,10 @@ import Layout from '../layouts/Layout.astro';
 			grid-template-columns: 1fr;
 			gap: 1.5rem;
 			margin-bottom: 2rem;
-			padding: 0;
-			box-sizing: border-box;
 		}
 
 		.box {
 			padding: 1.5rem 1rem;
-			margin: 0;
-			box-sizing: border-box;
-			width: 100%;
 		}
 
 		.box-title {
