@@ -1,11 +1,242 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<div class="container">
+		<h1 class="title">Los Regalos de María 🎁</h1>
+		
+		<div class="story">
+			<p class="paragraph greeting">
+				Querida María,
+			</p>
+
+			<p class="paragraph">
+				Si estás leyendo esto, es porque los Reyes Magos han decidido que este año... 
+				<span class="highlight">las cosas van a ser diferentes</span>.
+			</p>
+			
+			<p class="paragraph">
+				Nada de cartas escritas a mano. Nada de papeles que terminan en la basura. 
+				Este año, Sus Majestades de Oriente se han puesto modernos 
+				(están muy concienciados con el planeta, ¿sabes?).
+			</p>
+
+			<p class="paragraph">
+				Así que aquí estás tú, delante de una pantalla, a punto de descubrir 
+				si este año has sido lo suficientemente buena como para recibir tus regalos.
+			</p>
+			
+			<p class="paragraph divider">
+				Pero espera... <span class="highlight">hay un pequeño problema</span>.
+			</p>
+			
+			<p class="paragraph">
+				¿Te acuerdas de aquella carta que te trajo Papá Noel en Navidad? 
+				Sí, esa carta. La del <strong>Grinch</strong>.
+			</p>
+
+			<p class="paragraph">
+				El trato era claro: <em>"Si quieres tener regalos de los Reyes Magos, 
+				tendrás que terminar una tortuga de ganchillo"</em>.
+			</p>
+			
+			<p class="paragraph">
+				Y bueno... digamos que la tortuga sigue sin terminar. 😬
+			</p>
+
+			<p class="paragraph">
+				El Grinch, como era de esperar, <strong>no se lo tomó nada bien</strong>.
+			</p>
+			
+			<p class="paragraph">
+				De hecho, fue directamente a hablar con Melchor, Gaspar y Baltasar. 
+				Les dijo que no merecías ni un solo regalo este año. 
+				Que habías roto el trato. Que eras una... bueno, mejor no repetir lo que dijo.
+			</p>
+
+			<p class="paragraph">
+				Los Reyes Magos, que son sabios y justos (pero también un poco blanditos), 
+				decidieron intervenir. Hablaron con el Grinch durante horas. 
+				Negociaron. Argumentaron. Incluso le ofrecieron galletas.
+			</p>
+			
+			<p class="paragraph success">
+				Y finalmente... <strong>¡consiguieron convencerle!</strong> 🎉
+			</p>
+
+			<p class="paragraph">
+				Vas a tener tus regalos, María. Los Reyes no te han abandonado.
+			</p>
+			
+			<p class="paragraph twist">
+				Pero...
+			</p>
+
+			<p class="paragraph">
+				(Siempre hay un "pero", ¿verdad?)
+			</p>
+			
+			<p class="paragraph last">
+				El Grinch, ese cabronazo vengativo, puso una última condición: 
+				<span class="highlight">tus regalos están bloqueados con contraseñas secretas</span>. 
+				Dos cajas. Dos códigos. Si quieres abrirlas, tendrás que descubrir las combinaciones correctas.
+			</p>
+
+			<p class="paragraph final">
+				¿Aceptas el desafío?
+			</p>
+		</div>
+
+		<a href="/desbloquear-regalos" class="button">
+			Desbloquear Mis Regalos
+		</a>
+	</div>
 </Layout>
+
+<style>
+	.container {
+		max-width: 700px;
+		width: 100%;
+		text-align: center;
+		padding: 2rem;
+	}
+
+	.title {
+		font-size: clamp(2rem, 5vw, 3.5rem);
+		margin: 0 0 3rem 0;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		line-height: 1.1;
+	}
+
+	.story {
+		margin-bottom: 3rem;
+		text-align: left;
+	}
+
+	.paragraph {
+		font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+		line-height: 1.8;
+		margin: 0 0 1.5rem 0;
+		color: #e0e0e0;
+	}
+
+	.paragraph.greeting {
+		font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+		font-style: italic;
+		color: #f0f0f0;
+		margin-bottom: 2rem;
+	}
+
+	.paragraph.divider {
+		margin-top: 2.5rem;
+		margin-bottom: 2rem;
+		font-size: clamp(1.2rem, 2.5vw, 1.35rem);
+	}
+
+	.paragraph.success {
+		background: rgba(34, 197, 94, 0.1);
+		border-left: 4px solid #22c55e;
+		padding: 1.2rem 1.5rem;
+		border-radius: 8px;
+		margin: 2rem 0;
+	}
+
+	.paragraph.twist {
+		text-align: center;
+		font-size: clamp(1.4rem, 3vw, 1.8rem);
+		margin: 2.5rem 0 1rem 0;
+		font-weight: 600;
+		color: #fff;
+	}
+
+	.paragraph.final {
+		text-align: center;
+		font-size: clamp(1.25rem, 2.5vw, 1.4rem);
+		font-weight: 600;
+		color: #fff;
+		margin-top: 2.5rem;
+		margin-bottom: 0;
+	}
+
+	.paragraph.last {
+		margin-bottom: 0;
+		font-size: clamp(1.15rem, 2.5vw, 1.3rem);
+		font-weight: 500;
+	}
+
+	.highlight {
+		color: #fff;
+		font-weight: 600;
+	}
+
+	strong {
+		color: #fff;
+		font-weight: 600;
+	}
+
+	em {
+		color: #a0a0a0;
+		font-style: italic;
+	}
+
+	.button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 1rem 2.5rem;
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: #000;
+		background: #fff;
+		border: none;
+		border-radius: 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+	}
+
+	.button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 30px rgba(255, 255, 255, 0.2);
+		background: #f0f0f0;
+	}
+
+	.button:active {
+		transform: translateY(0);
+	}
+
+	.arrow {
+		font-size: 1.3rem;
+		transition: transform 0.3s ease;
+	}
+
+	.button:hover .arrow {
+		transform: translateX(4px);
+	}
+
+	@media (max-width: 768px) {
+		.container {
+			padding: 1rem;
+		}
+
+		.title {
+			margin-bottom: 2rem;
+		}
+
+		.story {
+			margin-bottom: 2rem;
+		}
+
+		.paragraph {
+			margin-bottom: 1.2rem;
+		}
+
+		.button {
+			padding: 0.9rem 2rem;
+			font-size: 1rem;
+		}
+	}
+</style>

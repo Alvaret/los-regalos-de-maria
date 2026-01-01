@@ -1,0 +1,304 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<div class="container">
+		<div class="emoji-header">👓✨</div>
+		<h1 class="title">Caja Elfos Desbloqueada</h1>
+		
+		<div class="story">
+			<p class="paragraph">
+				María, María, María... tenemos que hablar. 👀
+			</p>
+			
+			<p class="paragraph">
+				Los Reyes Magos han estado observando (sí, lo ven todo) y han notado algo.
+			</p>
+			
+			<p class="paragraph">
+				Esas gafas que llevas... <span class="highlight">están un poquito anticuadas</span>, ¿no crees? 
+				Para ser profesora y estar al día con todo, necesitas renovar el look. 😅
+			</p>
+			
+			<p class="paragraph">
+				Además, ahora que tienes tu <strong>flamante iPhone 17</strong>, 
+				las gafas tienen que estar a la altura. No puedes ir super moderna con el móvil 
+				y llevar unas gafas de... bueno, ya sabes. 📱
+			</p>
+			
+			<p class="paragraph">
+				Y seamos sinceros: <span class="highlight">una profesora con estilo inspira más</span>. 
+				Tus alumnos lo agradecerán, créenos.
+			</p>
+			
+			<p class="paragraph">
+				Los Reyes Magos también saben que elegir gafas es algo muy personal. 
+				Tiene que gustarte a ti, tiene que ir con tu cara, con tu estilo...
+			</p>
+			
+			<p class="paragraph important">
+				Así que tu regalo son: <strong>Las gafas que TÚ quieras</strong>. 🎁
+			</p>
+			
+			<p class="paragraph">
+				Las que más te gusten, las que mejor te queden, las que te hagan sentir genial. 
+				Elegancia, modernidad, comodidad... ¡tú decides!
+			</p>
+
+			<div class="voucher-box">
+				<h3>🎟️ Cómo canjear tu cupón</h3>
+				
+				<div class="step">
+					<span class="step-number">1</span>
+					<div class="step-content">
+						<strong>Activa tu cupón</strong>
+						<p>Envía un email a <span class="email">ruizpo12@gmail.com</span> con el código:</p>
+						<code class="code">SOYUNAGAFOTAS</code>
+					</div>
+				</div>
+
+				<div class="step">
+					<span class="step-number">2</span>
+					<div class="step-content">
+						<strong>Elige tus gafas</strong>
+						<p>Tienes <span class="highlight">6 meses</span> para elegir las gafas perfectas y hacer tu pedido.</p>
+					</div>
+				</div>
+
+				<div class="step">
+					<span class="step-number">3</span>
+					<div class="step-content">
+						<strong>Envía la factura</strong>
+						<p>Una vez tengas el importe, envía la factura al mismo correo.</p>
+					</div>
+				</div>
+
+				<div class="step">
+					<span class="step-number">4</span>
+					<div class="step-content">
+						<strong>Recibe tu Bizum mágico</strong>
+						<p>Como por arte de magia, recibirás un Bizum con el importe. ✨</p>
+					</div>
+				</div>
+			</div>
+
+			<p class="paragraph final">
+				¡A disfrutar de tus nuevas gafas, profesora moderna! 😎
+			</p>
+		</div>
+
+		<a href="/desbloquear-regalos" class="back-link">  Volver a las cajas</a>
+	</div>
+</Layout>
+
+<style>
+	.container {
+		max-width: 750px;
+		width: 100%;
+		text-align: center;
+		padding: 2rem;
+	}
+
+	.emoji-header {
+		font-size: 4rem;
+		margin-bottom: 1rem;
+		animation: bounce 2s ease-in-out infinite;
+	}
+
+	@keyframes bounce {
+		0%, 100% { transform: translateY(0); }
+		50% { transform: translateY(-10px); }
+	}
+
+	.title {
+		font-size: clamp(2rem, 5vw, 3rem);
+		margin: 0 0 3rem 0;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		background: linear-gradient(135deg, #4ade80, #22c55e);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.story {
+		margin-bottom: 2rem;
+		text-align: left;
+	}
+
+	.paragraph {
+		font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+		line-height: 1.8;
+		margin: 0 0 1.5rem 0;
+		color: #e0e0e0;
+	}
+
+	.paragraph.important {
+		font-size: clamp(1.25rem, 2.5vw, 1.4rem);
+		text-align: center;
+		margin: 2rem 0;
+		color: #fff;
+	}
+
+	.paragraph.final {
+		text-align: center;
+		font-size: 1.3rem;
+		margin-top: 2.5rem;
+		margin-bottom: 0;
+	}
+
+	.highlight {
+		color: #fff;
+		font-weight: 600;
+	}
+
+	strong {
+		color: #fff;
+		font-weight: 600;
+	}
+
+	.voucher-box {
+		background: rgba(74, 222, 128, 0.08);
+		border: 2px solid rgba(74, 222, 128, 0.3);
+		border-radius: 16px;
+		padding: 2rem;
+		margin: 2.5rem 0;
+	}
+
+	.voucher-box h3 {
+		margin: 0 0 2rem 0;
+		font-size: 1.5rem;
+		color: #4ade80;
+	}
+
+	.step {
+		display: flex;
+		gap: 1.25rem;
+		align-items: flex-start;
+		margin-bottom: 1.75rem;
+		text-align: left;
+	}
+
+	.step:last-child {
+		margin-bottom: 0;
+	}
+
+	.step-number {
+		flex-shrink: 0;
+		width: 36px;
+		height: 36px;
+		background: #22c55e;
+		color: #000;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		font-size: 1.1rem;
+	}
+
+	.step-content {
+		flex: 1;
+	}
+
+	.step-content strong {
+		display: block;
+		margin-bottom: 0.5rem;
+		font-size: 1.15rem;
+	}
+
+	.step-content p {
+		margin: 0.5rem 0;
+		color: #d0d0d0;
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+
+	.email {
+		color: #4ade80;
+		font-weight: 600;
+		font-family: 'Courier New', monospace;
+	}
+
+	.code {
+		display: inline-block;
+		background: rgba(34, 197, 94, 0.2);
+		color: #4ade80;
+		padding: 0.5rem 1rem;
+		border-radius: 8px;
+		font-family: 'Courier New', monospace;
+		font-size: 1.1rem;
+		font-weight: 700;
+		letter-spacing: 1px;
+		margin-top: 0.5rem;
+	}
+
+	.back-link {
+		display: inline-block;
+		margin-top: 2rem;
+		color: rgba(255, 255, 255, 0.6);
+		text-decoration: none;
+		font-size: 1rem;
+		transition: color 0.3s ease;
+	}
+
+	.back-link:hover {
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	@media (max-width: 768px) {
+		.container {
+			padding: 1rem;
+		}
+
+		.emoji-header {
+			font-size: 3rem;
+		}
+
+		.title {
+			margin-bottom: 2rem;
+		}
+
+		.story {
+			margin-bottom: 1.5rem;
+		}
+
+		.paragraph {
+			margin-bottom: 1.2rem;
+		}
+
+		.voucher-box {
+			padding: 1.5rem;
+		}
+
+		.voucher-box h3 {
+			font-size: 1.3rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.step {
+			gap: 1rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.step-number {
+			width: 32px;
+			height: 32px;
+			font-size: 1rem;
+		}
+
+		.step-content strong {
+			font-size: 1.05rem;
+		}
+
+		.step-content p {
+			font-size: 0.95rem;
+		}
+
+		.code {
+			font-size: 0.95rem;
+			padding: 0.4rem 0.8rem;
+		}
+	}
+</style>

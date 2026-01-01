@@ -1,0 +1,304 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<div class="container">
+		<h1 class="title">Desbloquear Regalos 🔓</h1>
+		
+		<p class="instructions">
+			Elige una caja e introduce el código de 4 dígitos para desbloquear tus regalos
+		</p>
+
+		<div class="boxes">
+			<!-- Caja Azul -->
+			<div class="box blue-box">
+				<h2 class="box-title">📦 Caja Azul</h2>
+				<form class="code-form" data-box="blue">
+					<div class="inputs-group">
+						<input type="text" maxlength="1" pattern="[0-9]" class="code-input" data-index="0" autocomplete="off" />
+						<input type="text" maxlength="1" pattern="[0-9]" class="code-input" data-index="1" autocomplete="off" />
+						<input type="text" maxlength="1" pattern="[0-9]" class="code-input" data-index="2" autocomplete="off" />
+						<input type="text" maxlength="1" pattern="[0-9]" class="code-input" data-index="3" autocomplete="off" />
+					</div>
+					<button type="submit" class="unlock-button">Desbloquear</button>
+				</form>
+			</div>
+
+			<!-- Caja Elfos -->
+			<div class="box green-box">
+				<h2 class="box-title">🧝 Caja Elfos</h2>
+				<form class="code-form" data-box="green">
+					<div class="inputs-group">
+						<input type="text" maxlength="1" pattern="[0-9]" class="code-input" data-index="0" autocomplete="off" />
+						<input type="text" maxlength="1" pattern="[0-9]" class="code-input" data-index="1" autocomplete="off" />
+						<input type="text" maxlength="1" pattern="[0-9]" class="code-input" data-index="2" autocomplete="off" />
+						<input type="text" maxlength="1" pattern="[0-9]" class="code-input" data-index="3" autocomplete="off" />
+					</div>
+					<button type="submit" class="unlock-button">Desbloquear</button>
+				</form>
+			</div>
+		</div>
+
+		<a href="/" class="back-link">  Volver</a>
+	</div>
+</Layout>
+
+<style>
+	.container {
+		max-width: 900px;
+		width: 100%;
+		text-align: center;
+		padding: 2rem;
+	}
+
+	.title {
+		font-size: clamp(2rem, 5vw, 3rem);
+		margin: 0 0 1.5rem 0;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+	}
+
+	.instructions {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		color: #e0e0e0;
+		margin-bottom: 3rem;
+	}
+
+	.boxes {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		margin-bottom: 2.5rem;
+	}
+
+	.box {
+		background: rgba(255, 255, 255, 0.03);
+		border: 2px solid rgba(255, 255, 255, 0.1);
+		border-radius: 16px;
+		padding: 2rem;
+		transition: all 0.3s ease;
+	}
+
+	.box:hover {
+		border-color: rgba(255, 255, 255, 0.2);
+		background: rgba(255, 255, 255, 0.05);
+	}
+
+	.blue-box:hover {
+		border-color: rgba(100, 150, 255, 0.5);
+	}
+
+	.green-box:hover {
+		border-color: rgba(100, 255, 150, 0.5);
+	}
+
+	.box-title {
+		font-size: 1.5rem;
+		margin: 0 0 1.5rem 0;
+		font-weight: 600;
+	}
+
+	.code-form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.inputs-group {
+		display: flex;
+		gap: 0.75rem;
+		justify-content: center;
+	}
+
+	.code-input {
+		width: 60px;
+		height: 70px;
+		font-size: 2rem;
+		font-weight: 600;
+		text-align: center;
+		background: rgba(255, 255, 255, 0.05);
+		border: 2px solid rgba(255, 255, 255, 0.15);
+		border-radius: 12px;
+		color: #fff;
+		transition: all 0.3s ease;
+		font-family: 'Courier New', monospace;
+	}
+
+	.code-input:focus {
+		outline: none;
+		border-color: rgba(255, 255, 255, 0.4);
+		background: rgba(255, 255, 255, 0.08);
+		transform: scale(1.05);
+	}
+
+	.code-input.correct {
+		background: rgba(34, 197, 94, 0.2);
+		border-color: rgb(34, 197, 94);
+		animation: pulse-correct 0.5s ease;
+	}
+
+	.code-input.incorrect {
+		background: rgba(239, 68, 68, 0.2);
+		border-color: rgb(239, 68, 68);
+		animation: shake 0.5s ease;
+	}
+
+	@keyframes pulse-correct {
+		0%, 100% { transform: scale(1); }
+		50% { transform: scale(1.1); }
+	}
+
+	@keyframes shake {
+		0%, 100% { transform: translateX(0); }
+		25% { transform: translateX(-8px); }
+		75% { transform: translateX(8px); }
+	}
+
+	.unlock-button {
+		padding: 0.9rem 2rem;
+		font-size: 1rem;
+		font-weight: 600;
+		color: #000;
+		background: #fff;
+		border: none;
+		border-radius: 12px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+		font-family: system-ui, -apple-system, sans-serif;
+	}
+
+	.unlock-button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 30px rgba(255, 255, 255, 0.2);
+		background: #f0f0f0;
+	}
+
+	.unlock-button:active {
+		transform: translateY(0);
+	}
+
+	.back-link {
+		display: inline-block;
+		margin-top: 1rem;
+		color: rgba(255, 255, 255, 0.6);
+		text-decoration: none;
+		font-size: 1rem;
+		transition: color 0.3s ease;
+	}
+
+	.back-link:hover {
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	@media (max-width: 768px) {
+		.container {
+			padding: 1rem;
+		}
+
+		.boxes {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.code-input {
+			width: 50px;
+			height: 60px;
+			font-size: 1.75rem;
+		}
+
+		.inputs-group {
+			gap: 0.5rem;
+		}
+	}
+</style>
+
+<script>
+	// Códigos correctos para cada caja
+	const CODES = {
+		blue: '3627',  // Código Caja Azul (taza)
+		green: '7941'  // Código Caja Elfos (gafas)
+	};
+
+	// URLs de destino para cada caja
+	const DESTINATIONS = {
+		blue: '/caja-azul',   // Taza del Grinch
+		green: '/caja-elfos'  // Gafas
+	};
+
+	// Función para manejar el auto-focus entre inputs
+	function setupInputs(form: HTMLFormElement) {
+		const inputs = form.querySelectorAll('.code-input') as NodeListOf<HTMLInputElement>;
+		
+		inputs.forEach((input, index) => {
+			// Solo permitir números
+			input.addEventListener('input', (e) => {
+				const target = e.target as HTMLInputElement;
+				target.value = target.value.replace(/[^0-9]/g, '');
+				
+				// Auto-focus al siguiente input
+				if (target.value && index < inputs.length - 1) {
+					inputs[index + 1].focus();
+				}
+			});
+
+			// Manejar backspace para volver atrás
+			input.addEventListener('keydown', (e) => {
+				if (e.key === 'Backspace' && !input.value && index > 0) {
+					inputs[index - 1].focus();
+				}
+			});
+
+			// Limpiar clases de validación al escribir
+			input.addEventListener('input', () => {
+				input.classList.remove('correct', 'incorrect');
+			});
+		});
+	}
+
+	// Función para validar el código
+	function validateCode(form: HTMLFormElement) {
+		const box = form.dataset.box as 'blue' | 'green';
+		const correctCode = CODES[box];
+		const inputs = form.querySelectorAll('.code-input') as NodeListOf<HTMLInputElement>;
+		
+		let enteredCode = '';
+		let allCorrect = true;
+
+		inputs.forEach((input, index) => {
+			const digit = input.value;
+			enteredCode += digit;
+			
+			// Validar cada dígito
+			if (digit === correctCode[index]) {
+				input.classList.remove('incorrect');
+				input.classList.add('correct');
+			} else {
+				input.classList.remove('correct');
+				input.classList.add('incorrect');
+				allCorrect = false;
+			}
+		});
+
+		// Si todos son correctos, redirigir
+		if (allCorrect && enteredCode === correctCode) {
+			setTimeout(() => {
+				window.location.href = DESTINATIONS[box];
+			}, 800);
+		}
+	}
+
+	// Inicializar todos los formularios
+	const forms = document.querySelectorAll('.code-form') as NodeListOf<HTMLFormElement>;
+	
+	forms.forEach(form => {
+		setupInputs(form);
+		
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+			validateCode(form);
+		});
+	});
+</script>
